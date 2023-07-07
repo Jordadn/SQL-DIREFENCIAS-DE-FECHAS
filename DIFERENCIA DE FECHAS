@@ -1,0 +1,36 @@
+5.	CREAR UN ALGORITMO QUE MUESTRE LA DIFERENCIA EN DIAS,MESES Y AÑOS DESDE 06/07/1925 HASTA LA FECHA ACTUAL.
+
+
+DECLARE @FechaActual DATE = '2023-07-06';
+DECLARE @FechaInicial DATE = '1925-07-06';
+DECLARE @DiferenciaDias INT = DATEDIFF(DAY, @FechaInicial, @FechaActual);
+DECLARE @DiferenciaMeses INT = DATEDIFF(MONTH, @FechaInicial, @FechaActual);
+DECLARE @DiferenciaAnios INT = DATEDIFF(YEAR, @FechaInicial, @FechaActual);
+
+
+SELECT @DiferenciaDias AS DiferenciaDias,
+       @DiferenciaMeses AS DiferenciaMeses,
+       @DiferenciaAnios AS DiferenciaAnios;
+
+
+
+
+-- Obtener la fecha actual
+DECLARE @FechaActual DATE = GETDATE();
+
+-- Fecha inicial
+DECLARE @FechaInicial DATE = '1925-07-06';
+
+-- Calcular la diferencia en días
+DECLARE @DiferenciaDias INT = DATEDIFF(DAY, @FechaInicial, @FechaActual);
+
+-- Calcular la diferencia en meses
+DECLARE @DiferenciaMeses INT = DATEDIFF(MONTH, @FechaInicial, @FechaActual);
+
+-- Calcular la diferencia en años
+DECLARE @DiferenciaAnios INT = DATEDIFF(YEAR, @FechaInicial, @FechaActual);
+
+-- Mostrar los resultados
+SELECT @DiferenciaDias AS DiferenciaDias,
+       @DiferenciaMeses AS DiferenciaMeses,
+       @DiferenciaAnios AS DiferenciaAnios;
